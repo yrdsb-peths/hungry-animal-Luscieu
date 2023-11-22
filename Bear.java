@@ -14,6 +14,25 @@ public class Bear extends Actor
      */
     public void act()
     {
-        // Add your action code here.
+        if(Greenfoot.isKeyDown("w"))
+        {
+            turn(-90);
+            move(1); 
+            turn(90);
+        }
+        if(Greenfoot.isKeyDown("a"))
+        {
+            move(-1);
+        }
+        if(Greenfoot.isKeyDown("s"))
+        {
+            turn(90);
+            move(1);
+            turn(-90);
+        }
+        if(Greenfoot.isKeyDown("d"))
+        {
+            move(1);
+        }
     }
 }
