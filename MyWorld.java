@@ -19,5 +19,7 @@ public class MyWorld extends World
         super(600, 400, 1, true); 
         Bear noko = new Bear();
         addObject(noko, 25, 25);
+        Pizza cheese = new Pizza();
+        addObject(cheese, 279, 1);
     }
 }
