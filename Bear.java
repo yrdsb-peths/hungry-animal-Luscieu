@@ -40,6 +40,7 @@ public class Bear extends Actor
             removeTouching(Pizza.class);
             MyWorld world = (MyWorld) getWorld();
             world.spawnPizza();
+            world.scoreIncrease();
         }
     }
 }
