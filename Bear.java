@@ -17,22 +17,29 @@ public class Bear extends Actor
         if(Greenfoot.isKeyDown("w"))
         {
             turn(-90);
-            move(1); 
+            move(10); 
             turn(90);
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-1);
+            move(-10);
         }
         if(Greenfoot.isKeyDown("s"))
         {
             turn(90);
-            move(1);
+            move(10);
             turn(-90);
         }
         if(Greenfoot.isKeyDown("d"))
         {
-            move(1);
+            move(10);
+        }
+        
+        if(isTouching(Pizza.class))
+        {
+            removeTouching(Pizza.class);
+            MyWorld world = (MyWorld) getWorld();
+            world.spawnPizza();
         }
     }
 }

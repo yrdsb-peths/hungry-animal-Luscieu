@@ -14,9 +14,6 @@ public class Pizza extends Actor
      */
     public void act()
     {
-        if(isTouching())
-        {
-            
-        }
+        setLocation(getX(), getY()+7);
     }
 }
