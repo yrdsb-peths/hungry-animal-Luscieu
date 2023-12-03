@@ -1,5 +1,6 @@
 #Greenfoot project file
 class.Bear.image=wombat.png
+class.MyWorld.image=wombackground.jpg
 class.Pizza.image=pizza_cheese.png
 dependency1.from=MyWorld
 dependency1.to=Label
@@ -19,10 +20,10 @@ dependency5.type=UsesDependency
 dependency6.from=Bear
 dependency6.to=Pizza
 dependency6.type=UsesDependency
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=232
-editor.fx.0.y=-6
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=584
 package.numDependencies=6
 package.numTargets=4
