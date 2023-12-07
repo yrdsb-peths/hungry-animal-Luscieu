@@ -15,6 +15,7 @@ public class MyWorld extends World
      */
     
     int score = 0;
+    int level = 1;
     Label scoreLabel;
     public MyWorld()
     {    
@@ -41,11 +42,16 @@ public class MyWorld extends World
     {
         score++;
         scoreLabel.setValue(score);
+        if(score % 3 == 0)
+        {
+            level++;
+        }
     }
         
     public void spawnPizza()
     {
         Pizza cheese = new Pizza();
+        cheese.setSpeed(level);
         int random = Greenfoot.getRandomNumber(600);
         addObject(cheese,random, 1);
     }           
