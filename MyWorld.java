@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class MyWorld here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Brennan 
+ * @version December 2023
  */
 public class MyWorld extends World
 {
@@ -34,16 +34,22 @@ public class MyWorld extends World
         
     }
     
+    /**
+     * Puts up game over label
+     */
     public void gameOver() {
         Label gameOverLabel = new Label("Game Over", 90);
         addObject(gameOverLabel, getWidth()/2, getHeight()/2);
     }
     
+    /**
+     * Increases score, increases level and movement speed at set intervals of scores.
+     */
     public void scoreIncrease()
     {
         score++;
         scoreLabel.setValue(score);
-        if(score % 4 == 0)
+        if(score % 3 == 0)
         {
             level++;
         }
@@ -53,6 +59,9 @@ public class MyWorld extends World
         }
     }
         
+    /**
+     * creates a pizza
+     */
     public void spawnPizza()
     {
         Pizza cheese = new Pizza();
@@ -61,6 +70,9 @@ public class MyWorld extends World
         addObject(cheese,random, 1);
     }           
     
+    /**
+     * gets movement speed
+     */
     public int getMovementSpeed()
     {
         return movementSpeed;
