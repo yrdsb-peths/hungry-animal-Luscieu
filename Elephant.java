@@ -49,6 +49,9 @@ public class Elephant extends Actor
      */
     public void animateElephant()
     {
+        /*
+         * Maybe you can slow your animation of the the elephant down
+         */
         if(animationTimer.millisElapsed() < 60)
         {
             return;
