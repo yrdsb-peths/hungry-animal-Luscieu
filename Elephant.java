@@ -20,6 +20,9 @@ public class Elephant extends Actor
     
     SimpleTimer dashCooldown = new SimpleTimer();
     
+    /**
+     * Constructor for objects of class Elephant.
+     */
     public Elephant()
     {
         for(int i = 0; i < idleRight.length; i++)
@@ -41,6 +44,9 @@ public class Elephant extends Actor
     }
     
     int imageIndex = 0;
+    /**
+     * Uses a delay to display frames of animation
+     */
     public void animateElephant()
     {
         if(animationTimer.millisElapsed() < 60)

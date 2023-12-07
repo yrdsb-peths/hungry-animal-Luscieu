@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * TitleScreen.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Brennan 
+ * @version December 2023
  */
 public class TitleScreen extends World
 {
@@ -31,13 +31,16 @@ public class TitleScreen extends World
         }
     }
     
+    /**
+     * Creates labels with the intent to let the user learn the controls
+     */
     public void tutorial()
     {
         Label controls = new Label("Use WASD to move", 30);
-        addObject(controls, getWidth()/2, getHeight()/2 - 40);
-        Label important = new Label("Hit 'shift' to dash", 50);
-        addObject(important, getWidth()/2, getHeight()/2+60);
-        Label start = new Label("Hit spacebar to start", 70);
-        addObject(start, getWidth()/2, getHeight()/2 + getHeight()/3);
+        addObject(controls, getWidth()/2-180, getHeight() - 90);
+        Label important = new Label("Hit 'shift' to dash", 30);
+        addObject(important, getWidth()/2-180, getHeight()-55);
+        Label start = new Label("Hit spacebar to start", 30);
+        addObject(start, getWidth()/2-180, getHeight()-20);
     }
 }

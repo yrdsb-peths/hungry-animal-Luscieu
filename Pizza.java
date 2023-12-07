@@ -25,6 +25,9 @@ public class Pizza extends Actor
         }
     }
     
+    /**
+     * Sets fall speed of pizza
+     */
     public void setSpeed(int spd)
     {
         speed = spd;
