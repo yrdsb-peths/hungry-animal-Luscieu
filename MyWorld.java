@@ -16,6 +16,7 @@ public class MyWorld extends World
     
     int score = 0;
     int level = 1;
+    int movementSpeed = 4;
     Label scoreLabel;
     public MyWorld()
     {    
@@ -46,6 +47,10 @@ public class MyWorld extends World
         {
             level++;
         }
+        if(score % 5 == 0)
+        {
+            movementSpeed++;
+        }
     }
         
     public void spawnPizza()
@@ -55,4 +60,9 @@ public class MyWorld extends World
         int random = Greenfoot.getRandomNumber(600);
         addObject(cheese,random, 1);
     }           
+    
+    public int getMovementSpeed()
+    {
+        return movementSpeed;
+    }
 }

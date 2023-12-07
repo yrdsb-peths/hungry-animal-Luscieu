@@ -18,6 +18,8 @@ public class Elephant extends Actor
     
     SimpleTimer animationTimer = new SimpleTimer();
     
+    SimpleTimer dashCooldown = new SimpleTimer();
+    
     public Elephant()
     {
         for(int i = 0; i < idleRight.length; i++)
@@ -63,29 +65,49 @@ public class Elephant extends Actor
      * Act - do whatever the Elephant wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    int multiplier = 1;
+    int flatSpeed = 0;
     public void act()
     {
         if(Greenfoot.isKeyDown("w"))
         {
             turn(-90);
-            move(10); 
+            move(3); 
             turn(90);
         }
         if(Greenfoot.isKeyDown("a"))
         {
-            move(-10);
+            MyWorld world = (MyWorld) getWorld();
+            move(-(world.getMovementSpeed()*multiplier+flatSpeed));
             facing = "left";
+            multiplier = 1;
+            flatSpeed = 0;
         }
         if(Greenfoot.isKeyDown("s"))
         {
+            MyWorld world = (MyWorld) getWorld();
             turn(90);
-            move(10);
+            move(3);
             turn(-90);
         }
         if(Greenfoot.isKeyDown("d"))
         {
-            move(10);
+            MyWorld world = (MyWorld) getWorld();
+            move(world.getMovementSpeed()*multiplier+flatSpeed);
             facing = "right";
+            multiplier = 1;
+            flatSpeed = 0;
+        }
+        
+        if(Greenfoot.isKeyDown("shift"))
+        {
+            if(dashCooldown.millisElapsed() > 3000)
+            {
+                multiplier = 4;
+                flatSpeed = 60;
+                dashCooldown.mark();
+            }
         }
         
         if(isTouching(Pizza.class))

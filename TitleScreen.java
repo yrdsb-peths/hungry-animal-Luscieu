@@ -33,8 +33,6 @@ public class TitleScreen extends World
     
     public void tutorial()
     {
-        Elephant elephant = new Elephant();
-        addObject(elephant, getWidth()/2, getHeight()/2);
         Label controls = new Label("Use WASD to move", 30);
         addObject(controls, getWidth()/2, getHeight()/2 - 40);
         Label important = new Label("Hit 'shift' to dash", 50);
