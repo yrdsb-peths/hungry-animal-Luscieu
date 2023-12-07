@@ -1,14 +1,3 @@
-# Hungry Animal Tutorial
-This is the README.md file.
-Change this file to show your intended audience what you want them to see.
-
-You can use **Markdown** syntax to format this file to do things like **bold** or *italicize* text.
-[Markdown basics](https://www.markdownguide.org/getting-started/)
-
-This particular repository is the starting template for the Hungry Elephant tutorial.
-
-[Part 1: Greenfoot Basics](https://youtu.be/zxaa3X0MihI)
-
-[Part 2: Game Enhancements](https://youtu.be/TwID9i0Ey6o)
-
-[Part 3: Final Touches](https://youtu.be/GT-eFwa4Abc)
+# Speedy Elephant Tutorial
+The goal of the game is collecting falling pizza for as long as possible to sate the hunger of the elephant "Noko", while increasing Noko's speed. In accordance with the tutorial, there is difficulty scaling.
+While Noko's speed increases, so do the pizzas'. The pizzas speed increase by more than Noko's. To compensate, I added a dash feature to give Noko a temporary speed boost. This makes the game less of a luck game of the food spawning near the animal, and more of a skillful game, giving the user access to a ability that is on a cooldown timer to add more depth.
