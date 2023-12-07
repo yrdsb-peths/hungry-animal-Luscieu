@@ -1,23 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class Elephant here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Elephant extends Actor
 {
-    /**
-     * Act - do whatever the Elephant wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    
     
     GreenfootSound pizzaSound = new GreenfootSound("pizza.mp3");
     GreenfootImage[] idleRight = new GreenfootImage[8];
     GreenfootImage[] idleLeft = new GreenfootImage[8];
     
     String facing = "right";
+    
+    SimpleTimer animationTimer = new SimpleTimer();
     
     public Elephant()
     {
@@ -35,11 +27,17 @@ public class Elephant extends Actor
             idleLeft[i].scale(100, 100); 
         }
         setImage(idleLeft[0]);
+        
+        animationTimer.mark();
     }
     
     int imageIndex = 0;
     public void animateElephant()
     {
+        if(animationTimer.millisElapsed() < 60)
+        {
+            return;
+        }
         if(facing.equals("right"))
         {
             setImage(idleRight[imageIndex]);
@@ -53,6 +51,11 @@ public class Elephant extends Actor
         
     }
     
+    
+    /**
+     * Act - do whatever the Elephant wants to do. This method is called whenever
+     * the 'Act' or 'Run' button gets pressed in the environment.
+     */
     public void act()
     {
         if(Greenfoot.isKeyDown("w"))
